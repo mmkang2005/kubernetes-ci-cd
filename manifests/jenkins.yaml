@@ -106,13 +106,13 @@ spec:
         command:
         - "/bin/sh"
         args:
-        - "/kubectl-config-context.sh"
+        - "/mmkang/kubectl-config-context.sh"
         volumeMounts:
         - name: kubeconfig
           mountPath: "/root/.kube"
         - name: kubectl-jenkins-context
-          mountPath: "/kubectl-config-context.sh"
-          subPath: "kubectl-config-context.sh"
+          mountPath: "/mmkang"
+    
       containers:
       - image: 127.0.0.1:30400/jenkins:latest
         name: jenkins
